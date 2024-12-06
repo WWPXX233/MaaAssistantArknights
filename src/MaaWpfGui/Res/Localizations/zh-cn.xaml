@@ -616,6 +616,14 @@ C:\\leidian\\LDPlayer9。\n
     <system:String x:Key="Peep">牛牛监控</system:String>
     <system:String x:Key="PeepTargetFps">目标帧率</system:String>
     <!--  !牛牛监控  -->
+    <!--  其它工具  -->
+    <system:String x:Key="OtherTools">其它工具</system:String>
+    <system:String x:Key="OtherToolsWarning">此处功能多为适配短周期的一次性小活动，稳定性无法保证</system:String>
+    <system:String x:Key="OtherToolsStartButton">开始运行</system:String>
+    <system:String x:Key="MoveAllStuffInGreenStore">搬空绿票商店</system:String>
+    <system:String x:Key="MoveAllStuffInActivityStore">搬空活动商店</system:String>
+    <system:String x:Key="CleanRedPointsInOperBox">清除干员列表红点</system:String>
+    <!--  !其它工具  -->
     <!--  日志  -->
     <system:String x:Key="Identifying">正在识别……</system:String>
     <system:String x:Key="IdentificationCompleted">识别完成</system:String>

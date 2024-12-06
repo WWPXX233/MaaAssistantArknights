@@ -24,10 +24,12 @@ using HandyControl.Controls;
 using MaaWpfGui.Constants;
 using MaaWpfGui.Helper;
 using MaaWpfGui.States;
+using MaaWpfGui.Utilities.ValueType;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Serilog;
 using Stylet;
+using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
 using Timer = System.Timers.Timer;
 
 namespace MaaWpfGui.ViewModels.UI
@@ -1019,6 +1021,29 @@ namespace MaaWpfGui.ViewModels.UI
                 IsPeepTransitioning = false;
             }
         }
+
+        #endregion
+
+        #region OtherTools
+
+        private static readonly List<string> OtherToolsList = [
+            "MoveAllStuffInGreenStore",
+            "MoveAllStuffInActivityStore",
+            "CleanRedPointsInOperBox"
+        ];
+
+        private static Dictionary<string, string> InitOtherToolsDict()
+        {
+            var dic = new Dictionary<string, string>();
+            foreach (var tool in OtherToolsList)
+            {
+                dic[tool] = LocalizationHelper.GetString(tool);
+            }
+
+            return dic;
+        }
+
+        private static readonly Dictionary<string, string> _otherToolsDict = InitOtherToolsDict();
 
         #endregion
     }
